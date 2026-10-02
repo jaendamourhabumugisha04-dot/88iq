@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="rw">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>88%IQ — Learning Platform</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="brand"><span>88%</span>IQ</div>
+  <nav>
+    <a href="#home">Ahabanza</a>
+    <a href="#subjects">Amasomo</a>
+    <a href="#quiz">Quiz</a>
+    <a href="#about">About</a>
+  </nav>
+  <button class="menu" onclick="toggleMenu()">☰</button>
+</header>
+
+<main>
+<section id="home" class="hero">
+  <div>
+    <p class="tag">LEARN • PRACTICE • IMPROVE</p>
+    <h1>88%IQ</h1>
+    <h2>Urubuga rwo kwigiramo no kwitegura ibizamini.</h2>
+    <p>Abanyeshuri bashobora kwiga amasomo, gukora ibibazo no gukurikirana amanota yabo ahantu hamwe.</p>
+    <div class="actions">
+      <a class="btn primary" href="#subjects">Tangira Kwiga</a>
+      <a class="btn secondary" href="#quiz">Kora Quiz</a>
+    </div>
+  </div>
+  <div class="hero-card">
+    <div class="book">📚</div>
+    <h3>Study smarter</h3>
+    <p>Hitamo isomo, wige, ukore practice, hanyuma urebe progress yawe.</p>
+  </div>
+</section>
+
+<section id="subjects" class="section">
+  <div class="section-head">
+    <div>
+      <p class="tag">SUBJECTS</p>
+      <h2>Amasomo</h2>
+    </div>
+    <input id="search" oninput="filterSubjects()" placeholder="Shakisha isomo...">
+  </div>
+  <div id="subjectGrid" class="grid">
+    <article class="subject"><span>📐</span><h3>Mathematics</h3><p>Numbers, algebra, geometry & practice.</p><button onclick="startSubject('Mathematics')">Tangira</button></article>
+    <article class="subject"><span>⚗️</span><h3>Chemistry</h3><p>Matter, reactions, atoms & calculations.</p><button onclick="startSubject('Chemistry')">Tangira</button></article>
+    <article class="subject"><span>🧬</span><h3>Biology</h3><p>Cells, organisms, systems & life science.</p><button onclick="startSubject('Biology')">Tangira</button></article>
+    <article class="subject"><span>⚡</span><h3>Physics</h3><p>Forces, energy, motion & electricity.</p><button onclick="startSubject('Physics')">Tangira</button></article>
+    <article class="subject"><span>🌍</span><h3>Geography</h3><p>Earth, environment, maps & population.</p><button onclick="startSubject('Geography')">Tangira</button></article>
+    <article class="subject"><span>📖</span><h3>English</h3><p>Grammar, vocabulary, reading & writing.</p><button onclick="startSubject('English')">Tangira</button></article>
+    <article class="subject"><span>🗺️</span><h3>History</h3><p>Events, people, societies & Rwanda history.</p><button onclick="startSubject('History')">Tangira</button></article>
+    <article class="subject"><span>💼</span><h3>Entrepreneurship</h3><p>Business ideas, finance & enterprise.</p><button onclick="startSubject('Entrepreneurship')">Tangira</button></article>
+    <article class="subject"><span>🇷🇼</span><h3>Kinyarwanda</h3><p>Ururimi, ubuvanganzo, imyandikire.</p><button onclick="startSubject('Kinyarwanda')">Tangira</button></article>
+  </div>
+</section>
+
+<section id="quiz" class="section quiz-section">
+  <div class="quiz-box">
+    <p class="tag">PRACTICE QUIZ</p>
+    <h2>Quiz ya 88%IQ</h2>
+    <p id="quizQuestion">Kanda “Tangira Quiz” ubone ikibazo.</p>
+    <div id="quizOptions"></div>
+    <button class="btn primary" onclick="nextQuestion()" id="quizBtn">Tangira Quiz</button>
+    <p id="score"></p>
+  </div>
+</section>
+
+<section id="register" class="section">
+  <div class="register">
+    <div>
+      <p class="tag">STUDENT ACCOUNT</p>
+      <h2>Iyandikishe</h2>
+      <p>Fungura profile yawe kugira ngo ubashe gukurikirana progress yawe.</p>
+    </div>
+    <form onsubmit="register(event)">
+      <input id="studentName" required placeholder="Amazina yawe">
+      <input id="studentClass" required placeholder="Urwego / Class (urugero S3)">
+      <input id="studentEmail" type="email" required placeholder="Email">
+      <button class="btn primary">Iyandikishe</button>
+    </form>
+    <p id="registerMsg"></p>
+  </div>
+</section>
+
+<section id="about" class="section about">
+  <p class="tag">ABOUT 88%IQ</p>
+  <h2>Kwiga. Kwitoza. Gutera imbere.</h2>
+  <p>88%IQ ni igitekerezo cy’urubuga rwafasha abanyeshuri kwiga no gukora practice online. Iyi version ni static demo; amakuru y’abanyeshuri ntarabikwa kuri server.</p>
+</section>
+</main>
+
+<footer>
+  <strong>88%IQ</strong> — Student Learning Platform<br>
+  <small>© 2026 88%IQ</small>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
